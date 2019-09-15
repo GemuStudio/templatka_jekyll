@@ -1,47 +1,91 @@
-name: Cath the Flow
-title: Work blog.
-description: Work blog.
+# Site Settings
+name: Jekflix
+title: Jekflix | A blog theme for Jekyll
+description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
+tags:
+  - blog
+  - template
+  - jekyll
+  - theme
+  - netlify
+email: youremail@xyz.com
+disqus_username: disqus_username
+show_hero: true
 
-plugins:
-  - jekyll-twitter-plugin
-  - jekyll-seo-tag
-  - jekyll-tagging
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-youtube
-  - jekyll-feed
-  - jekyll-redirect-from
-  
-include: ['_pages']
 
-author: Krzysztof Owsiany
-author_email: krzysztof@mrdev.pl
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: github_username
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
 
-tag_feed_layout: tag_feed
-tag_feed_dir: tag
 
-tag_page_layout: tag_page
-tag_page_dir: tag
-tag_permalink_style: pretty
-tag_page_data:
-  sitemap: true
+# Theme Settings
+themeColor: "#ff0a16"
+primaryDark: "#141414"
+accentDark: "#ffffff"
+lightGray: "#f2f2f2"
+texts: "#333333"
 
-mailchimp-list: //redgadgets.us10.list-manage.com/subscribe/post?u=2123c1f8978fd64d7bf7612072d81977a-us15;id=32b5575059"
 
-paginate: 10
-paginate_path: '/page:num/'
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
 
-google_analytics: UA-93197123-1
-google_tag_manager: GTM-WNPRZT9
 
-disqus: godev
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+language: "en"
 
+
+# Build settings
+markdown: kramdown
 highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
 
-linenos: true
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
 
-highlight:
-  linenos: true
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
 
-highlight_options:
-  linenos: true
+# Exclude my node related stuff
+exclude: [
+  'package.json',
+  'package-lock.json',
+  'src',
+  'node_modules',
+  'initpost.sh',
+  'Gemfile',
+  'Gemfile.lock',
+  'gulpfile.js',
+  'README.md'
+]

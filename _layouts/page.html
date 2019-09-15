@@ -1,9 +1,11 @@
-{% include head.html %}  
+---
+layout: default
+---
 
-{% include nav.html %}
+<div class="post">
 
-{% include page.html %}
+  <article class="post-content fullwidth">
+    {{ content }}
+  </article>
 
-{% include subscribe_form_minimal.html %}
-
-{% include footer.html %}    
+</div>
