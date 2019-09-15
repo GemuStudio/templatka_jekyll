@@ -1,0 +1,47 @@
+name: Cath the Flow
+title: Work blog.
+description: Work blog.
+
+plugins:
+  - jekyll-twitter-plugin
+  - jekyll-seo-tag
+  - jekyll-tagging
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-youtube
+  - jekyll-feed
+  - jekyll-redirect-from
+  
+include: ['_pages']
+
+author: Krzysztof Owsiany
+author_email: krzysztof@mrdev.pl
+
+tag_feed_layout: tag_feed
+tag_feed_dir: tag
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+tag_page_data:
+  sitemap: true
+
+mailchimp-list: //redgadgets.us10.list-manage.com/subscribe/post?u=2123c1f8978fd64d7bf7612072d81977a-us15;id=32b5575059"
+
+paginate: 10
+paginate_path: '/page:num/'
+
+google_analytics: UA-93197123-1
+google_tag_manager: GTM-WNPRZT9
+
+disqus: godev
+
+highlighter: rouge
+
+linenos: true
+
+highlight:
+  linenos: true
+
+highlight_options:
+  linenos: true
